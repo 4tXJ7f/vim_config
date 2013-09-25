@@ -1,9 +1,9 @@
 execute pathogen#infect()
 call pathogen#helptags()
 
-set number
-syntax enable
-set background=light
+syntax on
+set t_Co=16
+let g:solarized_termcolors=16
 colorscheme solarized
 
 set expandtab
