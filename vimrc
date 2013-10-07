@@ -13,3 +13,6 @@ set shiftwidth=3
 set ruler
 
 map <C-n> :NERDTreeToggle<CR>
+
+au BufRead *.tex setlocal spell
+au BufRead *.md setlocal spell
