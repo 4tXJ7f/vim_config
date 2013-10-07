@@ -16,3 +16,5 @@ map <C-n> :NERDTreeToggle<CR>
 
 au BufRead *.tex setlocal spell
 au BufRead *.md setlocal spell
+
+set colorcolumn=80
