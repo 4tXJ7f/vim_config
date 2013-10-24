@@ -18,3 +18,5 @@ au BufRead *.tex setlocal spell
 au BufRead *.md setlocal spell
 
 set colorcolumn=80
+
+autocmd FileType make setlocal noexpandtab
