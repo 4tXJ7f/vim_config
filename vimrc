@@ -20,3 +20,5 @@ au BufRead *.md setlocal spell
 set colorcolumn=80
 
 autocmd FileType make setlocal noexpandtab
+
+:nnoremap <C-\> gqip
