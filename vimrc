@@ -5,6 +5,7 @@ syntax on
 set t_Co=16
 let g:solarized_termcolors=16
 colorscheme solarized
+set guifont=Monaco:h9
 
 set number
 set expandtab
