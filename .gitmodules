@@ -16,3 +16,18 @@
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
+[submodule "bundle/YouCompleteMe"]
+	path = bundle/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule "m3-vim"]
+	path = m3-vim
+	url = https://github.com/4tXJ7f/m3-vim.git
+[submodule "bundle/m3-vim"]
+	path = bundle/m3-vim
+	url = https://github.com/4tXJ7f/m3-vim.git
+[submodule "bundle/scala_commenter"]
+	path = bundle/scala_commenter
+	url = https://github.com/megaannum/scala_commenter.git
+[submodule "bundle/self"]
+	path = bundle/self
+	url = https://github.com/megaannum/self.git
