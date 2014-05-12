@@ -31,3 +31,6 @@
 [submodule "bundle/self"]
 	path = bundle/self
 	url = https://github.com/megaannum/self.git
+[submodule "bundle/surround.vim"]
+	path = bundle/surround.vim
+	url = https://github.com/tpope/vim-surround.git
