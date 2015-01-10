@@ -5,26 +5,26 @@ syntax on
 set t_Co=16
 let g:solarized_termcolors=16
 colorscheme solarized
-set guifont=Anonymous\ Pro:h11 
+set guifont=Fira\ Mono:h9
 set antialias
 
-let mapleader=","
+let mapleader="-"
 
 " Quickly edit/reload the vimrc file
-nmap <silent> <leader>ev :e $MYVIMRC<CR>
-nmap <silent> <leader>sv :so $MYVIMRC<CR>
+nnoremap <silent> <leader>ev :vsplit $MYVIMRC<CR>
+nnoremap <silent> <leader>sv :source $MYVIMRC<CR>
 
 set hidden
-set autoindent 
 set number
+set tabstop=2
 set expandtab
-set tabstop=3
-set shiftwidth=3
+set softtabstop=2
+set shiftwidth=2
 set ruler
 set hlsearch
 set cursorline
 
-map <C-n> :NERDTreeToggle<CR>
+nnoremap <C-n> :NERDTreeToggle<CR>
 
 au BufRead *.tex setlocal spell
 au BufRead *.md setlocal spell
@@ -35,10 +35,19 @@ set list
 set listchars=tab:>.,trail:.,extends:#,nbsp:.
 
 filetype plugin indent on
-autocmd FileType make setlocal noexpandtab
-autocmd FileType scala setlocal tabstop=2
-autocmd FileType scala setlocal shiftwidth=2
-autocmd FileType scala map <leader>cm :call scala#commenter#Writer()<CR>
-autocmd FileType scala map <leader>cf :call scala#commenter#Formatter()<CR>
 
-:nnoremap <C-\> gqip
+augroup filetypes
+   autocmd!
+   autocmd FileType make setlocal noexpandtab
+   autocmd FileType scala noremap <buffer> <localleader>cm :call scala#commenter#Writer()<CR>
+   autocmd FileType scala noremap <buffer> <localleader>cf :call scala#commenter#Formatter()<CR>
+augroup END
+
+nnoremap <C-\> gqip
+
+" Ctrl+u to make a word uppercase in insert mode
+inoremap <c-u> <esc>viwUi
+nnoremap <c-u> viwU
+
+set laststatus=2
+set statusline=%f%=FileType:\ %y
