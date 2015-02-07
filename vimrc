@@ -43,6 +43,8 @@ augroup filetypes
    autocmd FileType scala noremap <buffer> <localleader>cf :call scala#commenter#Formatter()<CR>
 augroup END
 
+autocmd BufWritePost *.tex silent !make
+
 nnoremap <C-\> gqip
 
 " Ctrl+u to make a word uppercase in insert mode
