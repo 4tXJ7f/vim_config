@@ -43,13 +43,12 @@ augroup filetypes
    autocmd FileType scala noremap <buffer> <localleader>cf :call scala#commenter#Formatter()<CR>
 augroup END
 
-autocmd BufWritePost *.tex silent !make
-
 nnoremap <C-\> gqip
 
 " Ctrl+u to make a word uppercase in insert mode
 inoremap <c-u> <esc>viwUi
 nnoremap <c-u> viwU
 
+" Status line (vim-airline)
 set laststatus=2
-set statusline=%f%=FileType:\ %y
+set ttimeoutlen=50
