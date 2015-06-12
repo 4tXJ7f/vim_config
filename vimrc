@@ -52,3 +52,10 @@ nnoremap <c-u> viwU
 " Status line (vim-airline)
 set laststatus=2
 set ttimeoutlen=50
+
+let g:easytags_languages = {
+\   'haskell': {
+\       'cmd': '~/.cabal/bin/hasktags',
+\       'args': [],
+\   }
+\}
